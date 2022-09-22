@@ -1,0 +1,9 @@
+.header_home_page {
+    background-image: url("https://cdn.pixabay.com/photo/2022/09/11/11/35/project-management-7446587__480.jpg");
+    background-size: cover;
+    height: 75vh;
+}
+
+img {
+    width: 100%;
+}
