@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "5875379c-21d7-42e4-a088-d4c41ab6a968",
+		"name": "SoftDesk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19733343"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Thunder Client (https://www.thunderclient.com)",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Elem",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "hlo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all projects",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Thunder Client (https://www.thunderclient.com)",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgzOTgyODE4LCJpYXQiOjE2ODM4OTY0MTgsImp0aSI6IjcxZWM1MzY1MGY0NTQ3Nzc4ZTM0NGM1MTlmNDdiNzBiIiwidXNlcl9pZCI6MX0.xOM-1BqzpkTI7ClqOaT99hp03GzXPta9LVfrrQTXnjY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/projects/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"projects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crud One project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgzOTgyODE4LCJpYXQiOjE2ODM4OTY0MTgsImp0aSI6IjcxZWM1MzY1MGY0NTQ3Nzc4ZTM0NGM1MTlmNDdiNzBiIiwidXNlcl9pZCI6MX0.xOM-1BqzpkTI7ClqOaT99hp03GzXPta9LVfrrQTXnjY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Thunder Client (https://www.thunderclient.com)",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxMTQzODA3LCJpYXQiOjE2ODEwNTc0MDcsImp0aSI6ImQ1ZDI1MTA3YmZhZTQ5NGY4NjIxZTRmNDdhMDEzYmZlIiwidXNlcl9pZCI6MX0.hIzuqf57qBf4WAuCYzc-6LioAwo6MCeuPSZnCtdaniw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "6",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Projet 6",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Description",
+							"type": "text"
+						},
+						{
+							"key": "typ",
+							"value": "dev",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/projects/6/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"projects",
+						"6",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crud Issue of Project",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Thunder Client (https://www.thunderclient.com)",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgzOTgyODE4LCJpYXQiOjE2ODM4OTY0MTgsImp0aSI6IjcxZWM1MzY1MGY0NTQ3Nzc4ZTM0NGM1MTlmNDdiNzBiIiwidXNlcl9pZCI6MX0.xOM-1BqzpkTI7ClqOaT99hp03GzXPta9LVfrrQTXnjY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Amazing game",
+							"type": "text"
+						},
+						{
+							"key": "desc",
+							"value": "super bon jeu de la mort qui tue",
+							"type": "text"
+						},
+						{
+							"key": "tag",
+							"value": "View",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": "secondary",
+							"type": "text"
+						},
+						{
+							"key": "project_id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "assignee_user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "done",
+							"type": "text"
+						},
+						{
+							"key": "created_time",
+							"value": "2023-01-20T12:16:25.200423Z",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/projects/6/issues/4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"projects",
+						"6",
+						"issues",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crud comment of Issue",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Thunder Client (https://www.thunderclient.com)",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgzOTgyODE4LCJpYXQiOjE2ODM4OTY0MTgsImp0aSI6IjcxZWM1MzY1MGY0NTQ3Nzc4ZTM0NGM1MTlmNDdiNzBiIiwidXNlcl9pZCI6MX0.xOM-1BqzpkTI7ClqOaT99hp03GzXPta9LVfrrQTXnjY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "description",
+							"value": "super issue",
+							"type": "text"
+						},
+						{
+							"key": "issue_id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/projects/6/issues/4/comments/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"projects",
+						"6",
+						"issues",
+						"4",
+						"comments",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crud contributor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Thunder Client (https://www.thunderclient.com)",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgzOTgyODE4LCJpYXQiOjE2ODM4OTY0MTgsImp0aSI6IjcxZWM1MzY1MGY0NTQ3Nzc4ZTM0NGM1MTlmNDdiNzBiIiwidXNlcl9pZCI6MX0.xOM-1BqzpkTI7ClqOaT99hp03GzXPta9LVfrrQTXnjY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "project_id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "editor",
+							"type": "text"
+						},
+						{
+							"key": "permission",
+							"value": "reader",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/projects/6/contributors/4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"projects",
+						"6",
+						"contributors",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
