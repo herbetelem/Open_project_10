@@ -16,7 +16,11 @@ Ce projet est une api de gestion de projet qui permet d'ajouter a la maniere d'u
 
 You should have Python on you're OS and set a Venv before continue if you want to have a clean env
 
-you have to install the requirements with the command ``pip3 install -r requirements.txt``
+You have to install the requirements with the command ``pip3 install -r requirements.txt``
+
+You should have Postman on you're OS and set with the param in this documentation
+- https://documenter.getpostman.com/view/19733343/2s93ebTWFc
+Or you can use other Software like the plugin in VSCode who can do the same than Postman
 
 
 ## Launching
@@ -28,24 +32,10 @@ If you want to launch the project to be able to browse the site, run the command
 
 ## Functional
 
-This project aims to allow users to be able to request or create book reviews, and also to be able to browse them in order to collect opinions on specific books that may or may not exist in the site's library.
+This project aims to create projects and then be able to assign project contributors with different roles. You will be able to create issues for each project based on your rights and leave comments on each issue, also based on your rights.
 
-The user must be logged in to be able to perform all the following actions, or even to browse them
+Each action follows the CRUD principle, meaning that if you have permission, you can create, modify, edit, and delete each element.
 
-Each user can create a Ticket, ie a book, and he can publish at the same time the review of the book directly
-They can also ask for reviews of a book thanks to the action "ask a review" in this case each person who sees their post will be able to publish a review.
-And they can, as said just above, respond to a request for a book review.
-
-The user's home page feed will display posts from the user and people they follow.
-
-To subscribe to someone just go to the author's page and subscribe to the one he wants.
-And then on this subscription page he can manage these subscriptions and see these subscribers
-
-## Postman Documentation
-
-
-Here you will have the documentation of the setting you will have to set for use postman with this api
-- https://documenter.getpostman.com/view/19733343/2s93ebTWFc
 
 ## Made with
 
