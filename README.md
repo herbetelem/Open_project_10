@@ -18,7 +18,7 @@ You should have Python on you're OS and set a Venv before continue if you want t
 
 You have to install the requirements with the command ``pip3 install -r requirements.txt``
 
-You should have Postman on you're OS and set with the param in this documentation
+You should have Postman on you're OS and set with the param in this documentation, or you can export the settings from the JSON
 - https://documenter.getpostman.com/view/19733343/2s93ebTWFc
 Or you can use other Software like the plugin in VSCode who can do the same than Postman
 
