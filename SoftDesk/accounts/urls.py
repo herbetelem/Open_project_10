@@ -7,3 +7,4 @@ urlpatterns = [
     path('signup/', views.register_view, name='register_view'),
     path('profil/<id>/', views.profile_page, name='profile_page'),
 ]
+
