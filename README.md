@@ -3,7 +3,7 @@
 # Project Openclassroom : Créez une API sécurisée RESTful en utilisant Django REST
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](http://forthebadge.com)  [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](http://forthebadge.com).
 
-Ce projet est une api de gestion de projet qui permet d'ajouter a la maniere d'une api des projets, commentaires et de participants
+This project is an API to manage some project
 
 ### library and tools
 
