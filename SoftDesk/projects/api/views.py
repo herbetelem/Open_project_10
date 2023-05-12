@@ -27,9 +27,11 @@ class ProjectViewSet(viewsets.ModelViewSet):
     def update(self, request, *args, **kwargs):
         contributors = Contributor.objects.filter(
             user_id=request.user,
-            project_id__id=self.get_object().project_id.id,
+            project_id__id=self.get_object().id,
             permission='editor')
         if contributors:
+            return super().update(request, *args, **kwargs)
+        elif self.get_object().author_user_id == request.user:
             return super().update(request, *args, **kwargs)
         return None
 
@@ -61,6 +63,8 @@ class ContributorViewSet(viewsets.ModelViewSet):
             project_id__id=self.get_object().project_id.id,
             permission='editor')
         if contributors:
+            return super().update(request, *args, **kwargs)
+        elif self.get_object().project_id.author_user_id == request.user:
             return super().update(request, *args, **kwargs)
         return None
 
@@ -94,6 +98,8 @@ class IssueViewSet(viewsets.ModelViewSet):
             permission='editor')
         if contributors:
             return super().update(request, *args, **kwargs)
+        elif self.get_object().assignee_user_id == request.user:
+            return super().update(request, *args, **kwargs)
         return None
     
     def destroy(self, request, *args, **kwargs):
@@ -125,9 +131,11 @@ class CommentViewSet(viewsets.ModelViewSet):
     def update(self, request, *args, **kwargs):
         contributors = Contributor.objects.filter(
             user_id=request.user,
-            project_id__id=self.get_object().project_id.id,
+            project_id__id=self.get_object().issue_id.project_id.id,
             permission='editor')
         if contributors:
+            return super().update(request, *args, **kwargs)
+        elif self.get_object().author_user_id == request.user:
             return super().update(request, *args, **kwargs)
         return None
 
