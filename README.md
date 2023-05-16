@@ -8,7 +8,6 @@ This project is an API to manage some project
 ### library and tools
 
 - https://www.djangoproject.com/ Django
-- https://pypi.org/project/Pillow/ Pillow
 - https://www.django-rest-framework.org/ Rest Framework
 
 
